@@ -10,7 +10,7 @@ Requirments: present two random numbers and then pause before displaying the tot
 #include <random>
 using namespace std;
 
-int main() {
+int main() { //for rand function use test branch
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<int> dist(1, 1000);
