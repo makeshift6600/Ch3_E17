@@ -1,20 +1,24 @@
-// Ch3_E17.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+/* 
+File name: Ch3_E17.cpp
+Programmer: Jamen Cannady
+Date: 09/27
+Requirments: present two random numbers and then pause before displaying the total
+ 
+ 
+*/
 #include <iostream>
+#include <random>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
-}
+int main() {
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> dist(1, 1000);
+    int Num1 = dist(gen);
+    int Num2 = dist(gen);
+    int Total = (Num1 + Num2);
+    cout << "Add " << Num1 << " and " << Num2 << endl;
+    cout << "Press enter to see the answer";
+    cin.get();
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    cout << Total;
