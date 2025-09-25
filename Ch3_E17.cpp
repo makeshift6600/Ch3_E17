@@ -22,3 +22,4 @@ int main() { //for rand function use test branch
     cin.get();
 
     cout << Total;
+}
